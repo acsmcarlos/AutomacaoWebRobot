@@ -13,22 +13,21 @@ Cenario 1:Preencher Formulario Masculino
 
     &{user}    Factory User Masc
 
-    FOR    ${i}    IN RANGE    3
-        Given que eu acesso o site
-        When eu preencho os campos corretamente              ${user}[name]    ${user}[lastname]    ${user}[job]
-        And marco checkbox radio button e clico em submit    1                1
+    Given que eu acesso o site
+    When eu preencho os campos corretamente              ${user}[name]    ${user}[lastname]    ${user}[job]
+    And marco checkbox radio button e clico em submit    1                1
         # Sleep                                                3
-        Then eu envio o formulario com sucesso
-    END
+    Then eu envio o formulario com sucesso
+
 
 # Cenario 2:Preencher Formulario Feminino
 
-#     &{user}    Factory User Feme
+#    &{user}    Factory User Feme
 
-#     FOR    ${i}    IN RANGE    3
-#         Given que eu acesso o site
-#         When eu preencho os campos corretamente              ${user}[name]    ${user}[lastname]    ${user}[job]
-#         And marco checkbox radio button e clico em submit    3                2
-#         Sleep                                                3
-#         Then eu envio o formulario com sucesso
-#     END
+#    FOR                                                  ${i}             IN RANGE             3
+#    Given que eu acesso o site
+#    When eu preencho os campos corretamente              ${user}[name]    ${user}[lastname]    ${user}[job]
+#    And marco checkbox radio button e clico em submit    3                2
+#    Sleep                                                3
+#    Then eu envio o formulario com sucesso
+#    END
